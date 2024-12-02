@@ -235,7 +235,7 @@ p {
 }
 
 .download-buttons .app-store {
-    background-color: #0073e6; /* Цвет для App Store */
+    /*background-color: #0073e6; Цвет для App Store */
 }
 
 .download-buttons a:hover {
