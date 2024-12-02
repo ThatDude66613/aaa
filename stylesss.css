@@ -231,7 +231,7 @@ p {
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #4caf50; /* Цвет для Google Play */
+  /*  background-color: #4caf50;  Цвет для Google Play */
 }
 
 .download-buttons .app-store {
