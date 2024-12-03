@@ -42,7 +42,7 @@ document.getElementById('logoutButton').addEventListener('click', function() {
 
 // Данные карты
 const fullCardNumber = "4444 5378 9101 7368";
-const maskedCardNumber = "**** ** ** 7368";
+const maskedCardNumber = "* * * *   * * * *   7368";
 let isMasked = true;
 
 function toggleCardNumber() {
