@@ -222,96 +222,77 @@ body {
 
 
 
-/* Контейнер для карты */
-.card-flip-container {
-    perspective: 1000px; /* Добавляет 3D-эффект */
-    width: 300px;
-    height: 180px;
-    margin: 20px auto; /* Центрирование */
-}
 
-/* Внешний блок карты */
-.card-flip {
-    width: 100%;
-    height: 100%;
+
+
+
+
+
+
+
+
+
+
+
+/* Контейнер карты */
+.card-container {
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-    cursor: pointer;
-}
-
-/* Передняя сторона карты */
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Скрывает обратную сторону */
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-/* Задняя сторона карты */
-.card-back {
-    transform: rotateY(180deg); /* Поворачивает заднюю сторону */
+    width: 300px; /* Ширина карты */
+    height: 180px; /* Высота карты */
+    margin: 20px auto; /* Центровка */
 }
 
 /* Изображение карты */
 .card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Адаптирует изображение */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Добавляем переворот */
-.card-flip.flipped {
-    transform: rotateY(180deg); /* Поворачивает карту на 180 градусов */
-}
-
-
-
-
-
-
-/* Стиль для кнопки с изображением */
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    z-index: 100;
-    cursor: pointer;
-    animation: pulse 1s infinite ease-in-out; /* Пульсирующая анимация */
-}
-
-/* Стили для изображения внутри кнопки */
-.floating-button img {
+/* Полупрозрачный блок */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.02); /* Полупрозрачный фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст ближе к низу */
+    align-items: flex-end; /* Текст выравнивается справа */
+    border-radius: 10px;
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer;
+    z-index: 10; /* Поверх изображения */
+    padding: 15px; /* Отступы */
+    box-sizing: border-box;
 }
 
-/* Анимация пульсации */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+/* Номер карты */
+#card-number {
+    margin-bottom: 19px; /* Отступ от CVV */
+    margin-right: 90px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 14px;
 }
 
-/* Остановка анимации при наведении */
-.floating-button:hover {
-    animation: none;
+/* CVV */
+#card-cvv {
+    margin-right: 42px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 12px;
 }
+
+
+
+
+
+
 
 
 
@@ -331,7 +312,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 30px;
   background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -340,7 +321,7 @@ body {
 
 .currency-icon .icon {
   display: inline-block;
-  font-size: 24px;
+  font-size: 26px;
   color: #5a85ff;
 }
 
@@ -468,65 +449,3 @@ body {
   font-size: 14px;
   color: #333;
 }
-
-
-
-
-
-
-
-/* Контейнер карты */
-.card-container {
-    position: relative;
-    width: 300px; /* Ширина карты */
-    height: 180px; /* Высота карты */
-    margin: 20px auto; /* Центровка */
-}
-
-/* Изображение карты */
-.card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Полупрозрачный блок */
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.02); /* Полупрозрачный фон */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Текст ближе к низу */
-    align-items: flex-end; /* Текст выравнивается справа */
-    border-radius: 10px;
-    color: white; /* Цвет текста */
-    font-size: 16px; /* Размер шрифта */
-    font-weight: bold; /* Жирный текст */
-    cursor: pointer;
-    z-index: 10; /* Поверх изображения */
-    padding: 15px; /* Отступы */
-    box-sizing: border-box;
-}
-
-/* Номер карты */
-#card-number {
-    margin-bottom: 19px; /* Отступ от CVV */
-    margin-right: 90px; /* Выравнивание справа */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
-    font-size: 14px;
-}
-
-/* CVV */
-#card-cvv {
-    margin-right: 42px; /* Выравнивание справа */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
-    font-size: 12px;
-}
-
-
