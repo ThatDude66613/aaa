@@ -449,3 +449,51 @@ body {
   font-size: 14px;
   color: #333;
 }
+
+
+
+
+
+
+
+
+/* Стиль для кнопки с изображением */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse 1s infinite ease-in-out; /* Пульсирующая анимация */
+}
+
+/* Стили для изображения внутри кнопки */
+.floating-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Остановка анимации при наведении */
+.floating-button:hover {
+    animation: none;
+}
