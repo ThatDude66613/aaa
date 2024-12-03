@@ -475,8 +475,6 @@ body {
 
 
 
-
-
 /* Контейнер карты */
 .card-container {
     position: relative;
@@ -503,8 +501,9 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.02); /* Полупрозрачный фон */
     display: flex;
-    justify-content: flex-end; /* Поднимаем текст выше */
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст ближе к низу */
+    align-items: flex-end; /* Текст выравнивается справа */
     border-radius: 10px;
     color: white; /* Цвет текста */
     font-size: 16px; /* Размер шрифта */
@@ -513,12 +512,21 @@ body {
     z-index: 10; /* Поверх изображения */
     padding: 15px; /* Отступы */
     box-sizing: border-box;
-    text-align: center;
 }
 
-/* Текст номера карты */
+/* Номер карты */
 #card-number {
-    margin-top: 100px; /* Поднимаем текст, чтобы он был более читаемым */
-    margin-right:32%  ;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень для читаемости */
+    margin-bottom: 19px; /* Отступ от CVV */
+    margin-right: 90px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 14px;
 }
+
+/* CVV */
+#card-cvv {
+    margin-right: 42px; /* Выравнивание справа */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    font-size: 12px;
+}
+
+
