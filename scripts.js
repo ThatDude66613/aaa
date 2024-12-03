@@ -40,7 +40,25 @@ document.getElementById('logoutButton').addEventListener('click', function() {
 
 
 
-function flipCard() {
-    const card = document.querySelector('.card-flip');
-    card.classList.toggle('flipped'); // Переключает класс "flipped"
+// Данные карты
+const fullCardNumber = "1234 5678 9101 7368";
+const maskedCardNumber = "**** ** ** 7368";
+let isMasked = true;
+
+function toggleCardNumber() {
+    const cardNumberElement = document.getElementById("card-number");
+
+    if (!cardNumberElement) {
+        console.error("Элемент с ID 'card-number' не найден!");
+        return;
+    }
+
+    if (isMasked) {
+        // Показываем полный номер карты
+        cardNumberElement.textContent = fullCardNumber;
+    } else {
+        // Скрываем номер карты
+        cardNumberElement.textContent = maskedCardNumber;
+    }
+    isMasked = !isMasked;
 }
