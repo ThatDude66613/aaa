@@ -39,26 +39,33 @@ document.getElementById('logoutButton').addEventListener('click', function() {
 
 
 
-
 // Данные карты
-const fullCardNumber = "4444 5378 9101 7368";
-const maskedCardNumber = "* * * *   * * * *   7368";
+const fullCardNumber = "1234 5678 9101 7368";
+const maskedCardNumber = "**** ** ** 7368";
+
+const fullCardCVV = "CVV   375";
+const maskedCardCVV = "CVV   ***";
+
 let isMasked = true;
 
-function toggleCardNumber() {
+function toggleCardDetails() {
+    // Получаем элементы
     const cardNumberElement = document.getElementById("card-number");
+    const cardCVVElement = document.getElementById("card-cvv");
 
-    if (!cardNumberElement) {
-        console.error("Элемент с ID 'card-number' не найден!");
+    if (!cardNumberElement || !cardCVVElement) {
+        console.error("Элементы 'card-number' или 'card-cvv' не найдены!");
         return;
     }
 
+    // Переключение между замаскированным и полным видом
     if (isMasked) {
-        // Показываем полный номер карты
         cardNumberElement.textContent = fullCardNumber;
+        cardCVVElement.textContent = fullCardCVV;
     } else {
-        // Скрываем номер карты
         cardNumberElement.textContent = maskedCardNumber;
+        cardCVVElement.textContent = maskedCardCVV;
     }
-    isMasked = !isMasked;
+
+    isMasked = !isMasked; // Переключение состояния
 }
