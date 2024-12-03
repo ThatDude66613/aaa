@@ -21,10 +21,14 @@ function showTransactions(type) {
            `;
     } else if (type === 'income') {
         transactions.innerHTML = `
-           `;
+        `;
     } else if (type === 'expense') {
         transactions.innerHTML = `
-            `;
+            <div class="transaction">
+                <p>28.06.2021</p>
+                <p>-59,00 ₽</p>
+            </div>
+          `;
     }
 }
 
@@ -35,6 +39,9 @@ document.getElementById('logoutButton').addEventListener('click', function() {
     // Перенаправляем на другую страницу (например, "login.html")
     window.location.href = 'index.html';
 });
+
+
+
 
 
 
