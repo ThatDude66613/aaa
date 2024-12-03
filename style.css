@@ -283,10 +283,12 @@ body {
 
 /* CVV */
 #card-cvv {
-    margin-right: 42px; /* Выравнивание справа */
+    margin-right: 38 px; /* Выравнивание справа */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
     font-size: 12px;
+    margin-bottom: 12px;
 }
+
 
 
 
