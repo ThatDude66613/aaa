@@ -13,10 +13,27 @@
         <span class="profile-icon">👤</span>
     </button> -->
 
-     <button class="settings-button">
-            <span class="settings-icon">⚙️</span>
-        </button>
- 
+<!-- Кнопка настроек -->
+<button class="settings-button" onclick="toggleModal()">
+    <span class="settings-icon">⚙️</span>
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
         <p>АО Банк "Национальный стандарт"</p>
        <button id="logoutButton" class="logout-button">Выйти</button>
@@ -53,6 +70,76 @@
         
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="modalBg" class="modal-bg" onclick="toggleModal()"></div>
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <!-- Ваши элементы -->
+    
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="personal-icon.png" alt="Персональные данные">
+            </div>
+            <span>Персональные данные</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="settings-icon.png" alt="Настройки приложения">
+            </div>
+            <span>Настройки приложения</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <span class="profile-circle">ДД</span>
+            </div>
+            <div class="modal-text">
+                <span>Довгань Дмитрий</span>
+                <p>GOLD</p>
+            </div>
+            <span class="modal-status">&#10004;</span>
+        </div>
+        <hr>
+        <div class="modal-item">
+            <div class="modal-icon">
+                <img src="business-icon.png" alt="ФОП">
+            </div>
+            <span>чп</span>
+            <button class="details-button">Подробнее</button>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
