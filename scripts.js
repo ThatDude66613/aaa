@@ -73,3 +73,26 @@ function toggleCardDetails() {
 
     isMasked = !isMasked; // Переключение состояния
 }
+
+
+
+
+
+
+
+
+
+
+
+function toggleModal() {
+    const modal = document.getElementById('settingsModal');
+    const modalBg = document.getElementById('modalBg');
+
+    if (modal.style.display === 'block') {
+        modal.style.display = 'none';
+        modalBg.style.display = 'none';
+    } else {
+        modal.style.display = 'block';
+        modalBg.style.display = 'block';
+    }
+}
